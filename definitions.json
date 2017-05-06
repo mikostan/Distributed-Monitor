@@ -1,0 +1,23 @@
+{
+    "rabbit_version": "3.6.6",
+    "users": [{
+        "name": "admin",
+        "password_hash": "746j3RYxOcub9cb9D1+0vUV61DF/VngqyikVSfqXOCMVHaEd",
+        "hashing_algorithm": "rabbit_password_hashing_sha256",
+        "tags": "administrator"
+    }],
+    "vhosts": [{
+        "name": "/"
+    }],
+    "permissions": [{
+        "user": "admin",
+        "vhost": "/",
+        "configure": ".*",
+        "write": ".*",
+        "read": ".*"
+    }],
+    "parameters": [],
+    "policies": [],
+    "queues": [],
+    "bindings": []
+}
