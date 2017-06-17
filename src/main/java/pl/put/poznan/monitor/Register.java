@@ -1,27 +1,31 @@
 package pl.put.poznan.monitor;
 
-import lombok.Builder;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 import pl.put.poznan.monitor.IRegister;
 
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by mikolaj on 06.05.17.
  */
+@Data
 @Builder
-@RequiredArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 public class Register implements IRegister {
 
-    private final Map<String, Object> reg;
+    private Map<String, Object> objects;
+    private Set<String> locks;
 
     @Override
     public void put(String key, Object value) {
-        reg.put(key, value);
+        objects.put(key, value);
     }
 
     @Override
     public Object get(String key) {
-        return reg.get(key);
+        return objects.get(key);
     }
 }
